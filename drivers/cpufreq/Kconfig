@@ -152,6 +152,13 @@ config CPU_FREQ_DEFAULT_GOV_CULTIVATION
 	select CPU_FREQ_GOV_CULTIVATION
 	help
 
+config CPU_FREQ_DEFAULT_GOV_WHEATLEY
+	bool "wheatley"
+	select CPU_FREQ_GOV_WHEATLEY
+	select CPU_FREQ_GOV_PERFORMANCE
+	---help---
+	  Use the CPUFreq governor 'wheatley' as default.
+
 endchoice
 
 config CPU_FREQ_GOV_DARKNESS
@@ -279,6 +286,10 @@ config CPU_FREQ_GOV_CULTIVATION
 	tristate "'cultivation' cpufreq governor"
 	depends on CPU_FREQ
 	help
+
+config CPU_FREQ_GOV_WHEATLEY
+	tristate "'wheatley' cpufreq governor"
+	depends on CPU_FREQ
 
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
