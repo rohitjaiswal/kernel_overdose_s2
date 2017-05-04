@@ -159,6 +159,11 @@ config CPU_FREQ_DEFAULT_GOV_WHEATLEY
 	---help---
 	  Use the CPUFreq governor 'wheatley' as default.
 
+config CPU_FREQ_DEFAULT_GOV_SMARTMAX
+	bool "smartmax"
+	select CPU_FREQ_GOV_SMARTMAX
+	help
+
 endchoice
 
 config CPU_FREQ_GOV_DARKNESS
@@ -286,6 +291,26 @@ config CPU_FREQ_GOV_CULTIVATION
 	tristate "'cultivation' cpufreq governor"
 	depends on CPU_FREQ
 	help
+
+config CPU_FREQ_GOV_DARKNESS
+	tristate "'darkness' cpufreq policy governor"
+	  
+config CPU_FREQ_GOV_SMARTMAX
+	tristate "'smartmax' cpufreq policy governor"
+	help
+	  'smartmax' - This driver adds a dynamic cpufreq policy governor
+	  designed for latency-sensitive workloads.
+
+	  This governor attempts to reduce the latency of clock
+	  increases so that the system is more responsive to
+	  interactive workloads.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_interactive.
+
+	  For details, take a look at linux/Documentation/cpu-freq.
+
+	  If in doubt, say N.
 
 config CPU_FREQ_GOV_WHEATLEY
 	tristate "'wheatley' cpufreq governor"

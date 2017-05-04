@@ -16,6 +16,7 @@ obj-$(CONFIG_CPU_FREQ_GOV_CAFACTIVE)		+= cpufreq_cafactive.o
 obj-$(CONFIG_CPU_FREQ_GOV_DARKNESS)		+= cpufreq_darkness.o
 obj-$(CONFIG_CPU_FREQ_GOV_CULTIVATION)	+= cpufreq_cultivation.o
 obj-$(CONFIG_CPU_FREQ_GOV_WHEATLEY)	+= cpufreq_wheatley.o
+obj-$(CONFIG_CPU_FREQ_GOV_SMARTMAX)  += cpufreq_smartmax.o
 obj-$(CONFIG_CPU_FREQ_GOV_COMMON)		+= cpufreq_governor.o
 obj-$(CONFIG_CPU_BOOST)			+= cpu-boost.o
 obj-$(CONFIG_FINGERPRINT_BOOST)		+= fp-boost.o
