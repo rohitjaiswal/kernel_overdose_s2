@@ -4,7 +4,7 @@
     ccache -c
     make clean && make mrproper
     echo Cleaned Some Old Crappy Files
-    export CROSS_COMPILE=/home/ubuntu/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+    export CROSS_COMPILE=/home/ubuntu/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
     echo Compiler Set Sucessful    
     export ARCH=arm64
     echo Compiler Set To Build For ARM64
