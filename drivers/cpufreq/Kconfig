@@ -76,15 +76,6 @@ config CPU_FREQ_DEFAULT_GOV_IRONACTIVE
 	  is based on the 'interactive' governor with many changes made by
 	  CAF.
 
-config CPU_FREQ_DEFAULT_GOV_ZZMOOVE
-	bool "zzmoove"
-	select CPU_FREQ_GOV_ZZMOOVE
-	select CPU_FREQ_GOV_PERFORMANCE
-	help
-	  Use the CPUFreq governor 'zzmoove' as default, using predefined
-	  frequency lookup tables and optimized scaling triggers instead of
-	  % frequency steps to get smooth up/downscaling dependant on CPU load.
-
 config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
 	bool "BioShock"
 	select CPU_FREQ_GOV_BIOSHOCK
@@ -187,15 +178,6 @@ config CPU_FREQ_GOV_CAFACTIVE
 	  To compile this driver as a module, choose M here: the
 	  module will be called cpufreq_cafactive.
 
-	  If in doubt, say N.
-
-config CPU_FREQ_GOV_ZZMOOVE
-	tristate "'zzmoove' cpufreq governor"
-	depends on CPU_FREQ
-	help
-	  'zzmoove' - based on cpufreq_conservative, using predefined
-	  frequency lookup tables and optimized scaling triggers instead of
-	  % frequency steps to get smooth up/downscaling dependant on CPU load.
 	  If in doubt, say N.
 
 config CPU_FREQ_GOV_PERFORMANCE
