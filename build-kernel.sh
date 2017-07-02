@@ -8,7 +8,7 @@
     echo Cleaned Some Old Crappy Files
     export KBUILD_BUILD_USER="C4lvin"
     export KBUILD_BUILD_HOST="DarknessCloud"
-    export CROSS_COMPILE=/home/$USER/aarch64-linux-android-4.9/bin/aarch64-linux-android-    
+    export CROSS_COMPILE=/home/$USER/aarch64-linux-android-6.x/bin/aarch64-linux-android-    
     export ARCH=arm64
     make lineage_s2_defconfig
     make -j30 | tee /home/$USER/kernel_output.log
